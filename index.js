@@ -57,4 +57,8 @@ app.post('/read', upload.single('file'), (req, res) => {
   }
 })
 
+app.get('/home', (req, res) => {
+  res.status(200).json('Welcome, your app is working well');
+})
+
 app.listen(port, () => console.log(`Server run on port ${port}`))
